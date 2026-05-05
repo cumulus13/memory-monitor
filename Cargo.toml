@@ -1,6 +1,6 @@
 [package]
 name = "memory-monitor"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "A memory monitor and auto-cleaner with Growl/GNTP notification support"
 license = "MIT"
@@ -8,7 +8,7 @@ readme = "README.md"
 repository = "https://github.com/cumulus13/memory-monitor"
 homepage = "https://github.com/cumulus13/memory-monitor"
 documentation = "https://docs.rs/memory-monitor"
-keywords = ["memory", "monitor", "cleaner", "growl", "gntp", "notification"]
+keywords = ["memory", "monitor", "growl", "gntp", "notification"]
 categories = ["command-line-utilities", "os"]
 authors = ["Hadi Cahyadi <cumulus13@gmail.com>"]
 

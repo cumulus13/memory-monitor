@@ -5,7 +5,6 @@
 //! License: MIT
 
 use gntp::{GntpClient, NotificationType, Resource};
-use std::path::PathBuf;
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 pub struct GntpNotifier {
