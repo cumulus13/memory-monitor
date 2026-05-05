@@ -46,6 +46,7 @@ impl MemoryMonitor {
         }
     }
     
+    #[allow(dead_code)]
     pub fn with_config(config: MonitorConfig) -> Self {
         let notifier = GntpNotifier::new(
             &config.growl_host,
@@ -164,15 +165,13 @@ impl MemoryMonitor {
                     if success {
                         notifier.notify(
                             "🧹 Memory Cleaned",
-                            &format!("Memory was at {:.2}%. CleanMem executed successfully.", 
-                                memory_percent),
+                            &format!("Memory was at {:.2}%. CleanMem executed successfully.", memory_percent),
                             0,
                         );
                     } else {
                         notifier.notify(
                             "🔴 Memory Critical",
-                            &format!("Memory at {:.2}%. CleanMem execution failed!", 
-                                memory_percent),
+                            &format!("Memory at {:.2}%. CleanMem execution failed!", memory_percent),
                             2,
                         );
                     }
