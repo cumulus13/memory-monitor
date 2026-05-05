@@ -1,0 +1,18 @@
+# PT backup directory
+.pt/
+
+# Ignore Sublime Text project files
+*.sublime-*
+
+# Added entries (5 items)
+bin/
+download/
+temp/
+tmp*
+src/tmp*
+
+# Added entries (1 items)
+target/
+
+# Added entries (1 items)
+config.ini

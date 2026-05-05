@@ -1,0 +1,18 @@
+[Settings]
+# Memory usage percentage that triggers cleanup
+threshold = 85.0
+# Seconds between memory checks
+check_interval = 60
+# Path to memory cleaning executable
+cleanmem_path = cleanmem.exe
+icon_path = memory-monitor.png
+
+[Growl]
+# Growl server hostname or IP address
+host = localhost
+# Growl server port (default: 23053)
+port = 23053
+# Password for Growl server (leave empty if none)
+password = 
+# Application name shown in Growl
+app_name = Memory Monitor
