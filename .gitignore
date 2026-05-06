@@ -16,3 +16,6 @@ target/
 
 # Added entries (1 items)
 config.ini
+
+# Added entries (1 items)
+*.txt

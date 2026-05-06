@@ -1,6 +1,6 @@
 [package]
 name = "memory-monitor"
-version = "0.1.2"
+version = "0.1.4"
 edition = "2021"
 description = "A memory monitor and auto-cleaner with Growl/GNTP notification support"
 license = "MIT"
@@ -20,6 +20,24 @@ configparser = "3.0"
 termcolor = "1.4"
 crossterm = "0.27"
 ctrlc = "3.5"
+
+# Native OS memory APIs — each is only compiled on its target platform.
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+libc = "0.2"
+
+# windows-sys gives us access to Win32 APIs via safe, generated FFI bindings.
+# We use it for EnumProcesses / EmptyWorkingSet / NtSetSystemInformation.
+[target.'cfg(target_os = "windows")'.dependencies]
+# windows-sys is a lightweight, feature-gated crate; we only pull what we need.
+windows-sys = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+    "Win32_System_Memory",
+] }
 
 [dev-dependencies]
 tempfile = "3.0"
